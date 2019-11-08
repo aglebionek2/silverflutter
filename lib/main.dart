@@ -16,7 +16,42 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           child: Center(
-            child: Text("Hello World!"),
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Padding(
+                padding: EdgeInsets.all(5),
+                child: Container(
+                    color: Colors.grey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Text("Silver"),
+                                Text(
+                                  ".NET",
+                                  style: TextStyle(color: Colors.red),
+                                ),
+                              ],
+                            ),
+                            Text("Flutter jest spoko",
+                                style:
+                                    TextStyle(color: Colors.red, fontSize: 20)),
+                          ],
+                        ),
+                        Image.asset("assets/silver.png"),
+                        RaisedButton(
+                          onPressed: () {},
+                          color: Colors.red,
+                          child: Text('button, który nic nie robi.'),
+                        )
+                      ],
+                    )),
+              )
+            ]),
           ),
         ),
       ),
